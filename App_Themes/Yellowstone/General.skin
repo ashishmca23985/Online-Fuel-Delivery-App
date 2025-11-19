@@ -1,0 +1,52 @@
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<%-- TextBox Theme --%>
+<asp:TextBox runat="server" CssClass="textbox" />
+
+<%-- DropDown Theme --%>
+<asp:DropDownList runat="server" CssClass="dropdown"/>
+<asp:ListBox runat="server" CssClass="listbox"/>
+
+<%-- Label Theme --%>
+
+<%-- Button Theme --%>
+<asp:Button runat="server" CssClass="Button" />
+
+<%-- Gridview Theme --%>
+<asp:GridView runat="server" BorderStyle="Outset" BorderWidth="1px" 
+    Font-Bold="False" Font-Size="12pt">
+    <RowStyle ForeColor="Black" CssClass="gridItem" HorizontalAlign="left" VerticalAlign="Middle" />
+    <EditRowStyle Wrap="True" />
+    <AlternatingRowStyle CssClass="gridAlternateItem" BorderWidth="1px" />
+    <SelectedRowStyle CssClass="gridSelectedItem" />
+    <FooterStyle BackColor="#FF8080" />
+</asp:GridView>
+
+<%-- Menu Theme --%>
+<asp:Menu runat="server" BackColor="Transparent" Font-Bold="True" DynamicHorizontalOffset="2"  
+    Orientation="Horizontal" StaticSubMenuIndent="5px" Width="70%"
+    StaticPopOutImageUrl="~/images/pixel.gif">    
+    <StaticMenuItemStyle ForeColor="darkblue" HorizontalPadding="2px" VerticalPadding="2px" />
+    <DynamicHoverStyle BackColor="MistyRose" ForeColor="Blue" />
+    <DynamicMenuStyle BackColor="#A7CFFF" />
+    <DynamicMenuItemStyle HorizontalPadding="4px" VerticalPadding="4px" />
+    <StaticHoverStyle ForeColor="White" />
+</asp:Menu>
+
+<%-- Telerik Controls --%>
+<telerik:RadMenu runat="server" EnableOverlay="true" Skin="WebBlue"></telerik:RadMenu>
+<telerik:RadContextMenu Skin="WebBlue" runat="server"></telerik:RadContextMenu>
+<telerik:RadToolBar Skin="WebBlue" runat="server"></telerik:RadToolBar>
+<telerik:RadUpload runat="server" Skin="WebBlue"></telerik:RadUpload>
+<telerik:RadSplitter runat="server" Skin="WebBlue"></telerik:RadSplitter>
+<telerik:RadTabStrip runat="server" Skin="WebBlue"></telerik:RadTabStrip>
+<telerik:RadGrid runat="server" Skin="WebBlue">
+<SortingSettings SortedBackColor="#FFE2C6" SortedAscToolTip="Sort ASC" SortedDescToolTip="Sort DESC" />
+</telerik:RadGrid>
+<telerik:RadComboBox runat="server" Skin="WebBlue"></telerik:RadComboBox>
+<telerik:RadTextBox runat="server" Skin="WebBlue"></telerik:RadTextBox>
+<telerik:radeditor runat="server" Skin="WebBlue"></telerik:radeditor>
+<telerik:RadTreeView runat="server" Skin="WebBlue"></telerik:RadTreeView>
+<telerik:RadFormDecorator runat="server" DecoratedControls="CheckBoxes,RadioButtons" Skin="WebBlue"></telerik:RadFormDecorator>
+<telerik:RadPanelBar runat="server" Skin="WebBlue"></telerik:RadPanelBar>
+<telerik:RadWindowManager runat="server" Skin="WebBlue"></telerik:RadWindowManager>

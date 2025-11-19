@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.oji.top/ivr/" xmlns:ns1="http://com.oji.top/ivr/xsd" name="ivrService" targetNamespace="http://com.oji.top/ivr/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:tns="http://com.oji.top/ivr/xsd" elementFormDefault="qualified" targetNamespace="http://com.oji.top/ivr/xsd" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="accountStatement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="stmt_period" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="accountStatementResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="acct_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generatePin">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="cif_id" type="xs:string" />
+            <xs:element name="tpin" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generatePinResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="cif_id" type="xs:string" />
+            <xs:element name="tpin" type="xs:string" />
+            <xs:element name="phone_no" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountBalance">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAccountBalanceResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="result" type="tns:balance_info_type" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCcmsCustomerDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCcmsCustomerDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="response" type="tns:account_type" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTransaction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTransactionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="txns" nillable="true" type="tns:transaction_type" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="requestChequeBook">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="last_chq_number" type="xs:long" />
+            <xs:element name="chq_book_option" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="requestChequeBookResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="acct_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="stopCheque">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="cheque_number" type="xs:long" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="stopChequeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="info">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="acct_number" type="xs:string" />
+                  <xs:element name="cheque_number" type="xs:string" />
+                  <xs:element name="cheque_status" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateAccount">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="acct_number" type="xs:string" />
+            <xs:element name="call_id" type="xs:string" />
+            <xs:element name="phone_number" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="validateAccountResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string" />
+            <xs:element minOccurs="0" name="desc" type="xs:string" />
+            <xs:element name="result" type="tns:acccount_info_type" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="transaction_type">
+        <xs:sequence>
+          <xs:element name="tran_date" type="xs:date" />
+          <xs:element name="tran_amount" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="acccount_info_type">
+        <xs:sequence>
+          <xs:element name="acct_number" type="xs:string" />
+          <xs:element name="cif_id" type="xs:string" />
+          <xs:element name="tpin" type="xs:string" />
+          <xs:element name="phone_no" type="xs:string" />
+          <xs:element name="status" type="xs:string" />
+          <xs:element name="acct_type" type="xs:string" />
+          <xs:element name="acct_sub_type" type="xs:string" />
+          <xs:element name="email" type="xs:string" />
+          <xs:element name="acct_title" type="xs:string" />
+          <xs:element name="acct_name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="balance_info_type">
+        <xs:sequence>
+          <xs:element name="current_bal" type="xs:double" />
+          <xs:element name="bank_date" type="xs:date" />
+          <xs:element name="clr_amount" type="xs:double" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="account_type">
+        <xs:sequence>
+          <xs:element name="account_number" type="xs:string" />
+          <xs:element name="acct_name" type="xs:string" />
+          <xs:element name="currency" type="xs:string" />
+          <xs:element name="acct_type" type="xs:string" />
+          <xs:element name="acct_sub_type" type="xs:string" />
+          <xs:element name="branch_id" type="xs:string" />
+          <xs:element name="branch_name" type="xs:string" />
+          <xs:element name="customer" type="tns:customer_type" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customer_type">
+        <xs:sequence>
+          <xs:element name="title_code" type="xs:string" />
+          <xs:element name="first_name" type="xs:string" />
+          <xs:element name="middle_name" type="xs:string" />
+          <xs:element name="last_name" type="xs:string" />
+          <xs:element name="email" type="xs:string" />
+          <xs:element name="customer_type" type="xs:string" />
+          <xs:element name="phones">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="phone" type="tns:phone_type" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="addresses">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="address" type="tns:address_type" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="emails">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="email" type="tns:email_type" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="phone_type">
+        <xs:sequence>
+          <xs:element name="phone_number" type="xs:string" />
+          <xs:element name="preferred_number" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="address_type">
+        <xs:sequence>
+          <xs:element name="address1" type="xs:string" />
+          <xs:element name="address2" type="xs:string" />
+          <xs:element name="city_code" type="xs:string" />
+          <xs:element name="postal_code" type="xs:string" />
+          <xs:element name="state" type="xs:string" />
+          <xs:element name="country_code" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="email_type">
+        <xs:sequence>
+          <xs:element name="email" type="xs:string" />
+          <xs:element name="preferred_mail" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="ivrServicePortType_generatePin">
+    <part name="parameters" element="ns1:generatePin" />
+  </message>
+  <message name="ivrServicePortType_getTransactionResponse">
+    <part name="parameters" element="ns1:getTransactionResponse" />
+  </message>
+  <message name="ivrServicePortType_accountStatement">
+    <part name="parameters" element="ns1:accountStatement" />
+  </message>
+  <message name="ivrServicePortType_validateAccountResponse">
+    <part name="parameters" element="ns1:validateAccountResponse" />
+  </message>
+  <message name="ivrServicePortType_requestChequeBookResponse">
+    <part name="parameters" element="ns1:requestChequeBookResponse" />
+  </message>
+  <message name="ivrServicePortType_requestChequeBook">
+    <part name="parameters" element="ns1:requestChequeBook" />
+  </message>
+  <message name="ivrServicePortType_getCcmsCustomerDetails">
+    <part name="getCcmsCustomerDetails" element="ns1:getCcmsCustomerDetails" />
+  </message>
+  <message name="ivrServicePortType_getAccountBalanceResponse">
+    <part name="parameters" element="ns1:getAccountBalanceResponse" />
+  </message>
+  <message name="ivrServicePortType_generatePinResponse">
+    <part name="parameters" element="ns1:generatePinResponse" />
+  </message>
+  <message name="ivrServicePortType_getTransaction">
+    <part name="parameters" element="ns1:getTransaction" />
+  </message>
+  <message name="ivrServicePortType_stopCheque">
+    <part name="parameters" element="ns1:stopCheque" />
+  </message>
+  <message name="ivrServicePortType_stopChequeResponse">
+    <part name="parameters" element="ns1:stopChequeResponse" />
+  </message>
+  <message name="ivrServicePortType_accountStatementResponse">
+    <part name="parameters" element="ns1:accountStatementResponse" />
+  </message>
+  <message name="ivrServicePortType_validateAccount">
+    <part name="parameters" element="ns1:validateAccount" />
+  </message>
+  <message name="ivrServicePortType_getCcmsCustomerDetailsResponse">
+    <part name="getCcmsCustomerDetailsResponse" element="ns1:getCcmsCustomerDetailsResponse" />
+  </message>
+  <message name="ivrServicePortType_getAccountBalance">
+    <part name="parameters" element="ns1:getAccountBalance" />
+  </message>
+  <portType name="ivrServicePortType">
+    <operation name="accountStatement" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_accountStatement" />
+      <output message="tns:ivrServicePortType_accountStatementResponse" />
+    </operation>
+    <operation name="generatePin" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_generatePin" />
+      <output message="tns:ivrServicePortType_generatePinResponse" />
+    </operation>
+    <operation name="getAccountBalance" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_getAccountBalance" />
+      <output message="tns:ivrServicePortType_getAccountBalanceResponse" />
+    </operation>
+    <operation name="getCcmsCustomerDetails" parameterOrder="getCcmsCustomerDetails">
+      <input message="tns:ivrServicePortType_getCcmsCustomerDetails" />
+      <output message="tns:ivrServicePortType_getCcmsCustomerDetailsResponse" />
+    </operation>
+    <operation name="getTransaction" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_getTransaction" />
+      <output message="tns:ivrServicePortType_getTransactionResponse" />
+    </operation>
+    <operation name="requestChequeBook" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_requestChequeBook" />
+      <output message="tns:ivrServicePortType_requestChequeBookResponse" />
+    </operation>
+    <operation name="stopCheque" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_stopCheque" />
+      <output message="tns:ivrServicePortType_stopChequeResponse" />
+    </operation>
+    <operation name="validateAccount" parameterOrder="parameters">
+      <input message="tns:ivrServicePortType_validateAccount" />
+      <output message="tns:ivrServicePortType_validateAccountResponse" />
+    </operation>
+  </portType>
+  <binding name="ivrServicePortTypeBinding" type="tns:ivrServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="accountStatement">
+      <soap:operation soapAction="http://com.oji.top/ivr/accountStatement" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generatePin">
+      <soap:operation soapAction="http://com.oji.top/ivr/generatePin" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountBalance">
+      <soap:operation soapAction="http://com.oji.top/ivr/getAccountBalance" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCcmsCustomerDetails">
+      <soap:operation soapAction="http://com.oji.top/ivr/getCcmsCustomerDetails" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTransaction">
+      <soap:operation soapAction="http://com.oji.top/ivr/getTransaction" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="requestChequeBook">
+      <soap:operation soapAction="http://com.oji.top/ivr/requestChequeBook" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="stopCheque">
+      <soap:operation soapAction="http://com.oji.top/ivr/stopCheque" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateAccount">
+      <soap:operation soapAction="http://com.oji.top/ivr/validateAccount" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ivrService">
+    <port name="IvrServiceBeanPort" binding="tns:ivrServicePortTypeBinding">
+      <soap:address location="http://OJI:8180/top-top/IvrServiceBean" />
+    </port>
+  </service>
+</definitions>
