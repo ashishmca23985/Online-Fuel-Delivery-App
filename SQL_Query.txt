@@ -1,0 +1,8 @@
+CREATE function [dbo].[GetFuelReqDocPath](@FuelID INT)
+Returns VARCHAR(100)
+AS
+BEGIN
+	RETURN ISNULL((SELECT TOP 1  'http://easyfuel-mm.com/GalaxyDocuments/'+document_file_name as document_path 
+			from crm_documents Where related_to_id = @FuelID),'')
+END
+--------------------------------------------------------

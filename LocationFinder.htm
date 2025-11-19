@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #txtPlaces
+        {
+            background-color: #fff;
+            padding: 0 11px 0 10px;
+            width: 400px;
+            font-family: Calibri;
+            font-size: 10pt;
+            font-weight: 200;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            height: 20px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        #dvPlaces
+        {
+            color: #fff;
+            background-color: #0090CB;
+            margin-top: 10px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding: 5px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs-N8XxSQWIfllyifIcpNLKANPTWnd2jk&libraries=places"></script>
+
+
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAehm7Ca22LdxaMBrqJubmrDr729ge7A0E&libraries=places&language=en"></script>-->
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmSZwEGMWpCdpj0_3I-IzAkyF2NOF0AD8&libraries=places"></script>-->
+
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            //Load the Google Map.
+            var yangon = new google.maps.LatLng(16.8409, 96.1735);
+            var mapOptions = {
+                zoom: 10,
+                center: yangon
+            };
+            var map = new google.maps.Map(document.getElementById('dvMap'), mapOptions);
+
+            //Load the Places AutoComplete TextBox.
+            var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+            places.bindTo('bounds', map);
+
+            //Place the Places AutoComplete TextBox on the Google Map.
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(document.getElementById("dvPlaces"));
+
+            //Initialize the marker.
+            var marker = new google.maps.Marker({
+                position: yangon,
+                map: map
+
+            });
+            marker.setVisible(false);
+
+            //Assign the Place_Changed event handler to the Places AutoComplete TextBox.
+            google.maps.event.addListener(places, 'place_changed', function () {
+
+                //Remove previous marker.
+                marker.setMap(null);
+                // alert(place.geometry.location.LatLng);
+
+                //Plot the marker for the Address Location on the Google Map.
+                var place = places.getPlace();
+
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+
+                //alert(latitude + ',' + longitude);
+                if (place.geometry) {
+                    marker = new google.maps.Marker({
+                        position: place.geometry.location,
+                        map: map
+                    });
+                    map.setCenter(place.geometry.location);
+
+                    //Display Info Window for the Address Location.
+                    var infoWindow = new google.maps.InfoWindow();
+                    infoWindow.setContent("<div style = 'width:350px;min-height:20px'>" + place.name + "   ," + latitude + ',' + longitude + "</div>");
+                    infoWindow.open(map, marker);
+                }
+            });
+        });
+    </script>
+    <div id="dvPlaces">
+        <input type="text" id="txtPlaces" style="width: 350px" />
+    </div>
+    <div id="dvMap" style="width: 98.9%; height: 400px">
+    </div>
+</body>
+</html>

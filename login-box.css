@@ -1,0 +1,74 @@
+
+
+#login-box {
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	 margin: 100px auto 0;
+	
+	font: 12px 'Segoe UI';
+	background: url(images/g2.jpg) ;
+
+}
+
+#login-box img {
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 145px;
+    height: 36px;
+}
+
+.tdBottom
+{
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    font: 12px 'Segoe UI';
+}
+#login-box h2 {
+	padding:0;
+	margin:0;
+	font: 44px 'Segoe UI';
+}
+
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: left;
+	padding: 10px 10px 0 0;
+	margin:0 0 7px 0;
+    font-weight: bold;
+	font: 12px 'Segoe UI';
+}
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:200px;
+	margin:0;
+	margin:0 0 10px 0;
+}
+
+
+.form-login  {
+	width: 150px;
+	padding: 3px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:White;
+	color: Black;
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:87px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}

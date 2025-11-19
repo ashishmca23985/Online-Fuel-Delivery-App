@@ -1,0 +1,602 @@
+﻿<!doctype html>
+<html lang="en" class="animated fadeIn">
+
+<!-- Mirrored from future.FuelEasy.com/web-portal by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2020 08:08:05 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Easyfuel</title>
+    <link rel="stylesheet" href="website/css/app7b30.css?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="website/image/apple-touch-icon.png">
+    <link rel="icon" type="image/ico" sizes="32x32" href="website/image/easyfuellogo.png">
+    <link rel="icon" type="image/ico" sizes="16x16" href="website/image/easyfuellogo.png">
+
+    <link rel="mask-icon" href="website/image/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="google-site-verification" content="dwl9yEnESxUPrOGfmRxQUBvuzzQ9dIGOwDj5XVoc4kw" />
+    <meta name="csrf-token" content="siaSSzyLuyk6Cx9Ls4U6X1lSQsTDNUK9Z68AoRkf">
+    <!-- Start of FuelEasysupport Zendesk Widget script -->
+    <!-- <script id="ze-snippet" src="../static.zdassets.com/ekr/snippet8bf0.js?key=fe2944de-e34c-418c-ac8b-63ce06d26492"> </script> -->
+    <!-- End of FuelEasysupport Zendesk Widget script -->
+    <style type="text/css">
+
+        .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            min-width: 8rem !important;
+        }
+    </style>
+    
+    <!--<script src="website/js/chatapi.js?v=1"></script>-->
+
+</head>
+
+<body>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs-N8XxSQWIfllyifIcpNLKANPTWnd2jk&libraries=places"></script>
+
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAehm7Ca22LdxaMBrqJubmrDr729ge7A0E&libraries=places&language=en"></script>-->
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmSZwEGMWpCdpj0_3I-IzAkyF2NOF0AD8&libraries=places"></script>-->
+
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('CompanyName'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+
+                var place = places.getPlace();
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                // alert(latitude);
+                //  alert(longitude);
+                // alert(place.name);
+
+                document.getElementById("CompanyName").value = place.name;
+                document.getElementById("pinlocation").value = place.formatted_address
+                document.getElementById("LatiLong").value = latitude + "," + longitude;
+            });
+        });
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFVPBLP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="navigation-header">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark" id="navmenu">
+            <div class="container-fluid">
+
+                <a class="navbar-brand " href="index.html">
+                    <img src="website/image/easyfuellogo.png" width="100px" alt="EasyFuel">
+                </a>
+
+                <div class="pull-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="website/image/navbar.png" class="navbar-logo" alt="">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <button class="navbar-toggler close-icon" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <a href="#"><img src="website/image/close-iconn.png"></a>
+                        </button>
+                        <div class="navbar-mobile">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fa fa-phone"></i>
+                                        <b>+95 - 9966 708 090</b>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown company toggle-event">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                       aria-expanded="false">
+                                        CRM
+                                    </a>
+                                    <div class="dropdown-menu company-dropdown" aria-labelledby="dropdown01">
+                                        <a class="dropdown-item company-drop mobile-hardware" href="mobile-app.html">Mobile-App</a>
+
+                                        <a class="dropdown-item company-drop mobile-hardware" href="web-portal.html">Web-Portal</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#feature">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#how-to-order-section">How to Order</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Sustainability.html">Sustainability</a>
+                                </li>
+                                <li class="nav-item contant-link">
+                                    <a class="nav-link" href="index.html#sectionFAQ">FAQ</a>
+                                </li>
+
+                                <li class="nav-item contant-link">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main role="main" class="Webportalpage">
+        <section class="web-header sky-blue text-center">
+            <h2 class="contact-name" style="padding-top: 2rem!important;">Order Now</h2>
+        </section>
+
+
+        <section class="fuelclos-register back-white" id="section6">
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h5 class="text-center" id="SuccessMsg"></h5>
+                        <h6>Order Now</h6>
+                        <!--<form name="myForm" id="myForm" method="post" onSubmit="submitVal();">-->
+                        <form name="myForm" id="myForm">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Customer Name <span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="Name" name="Name" required>
+                                        <span id="NameMsg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Company Name <span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="CompanyName" name="CompanyName" required>
+                                        <span id="CompanyNameMsg"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Pin Location<span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="pinlocation" name="pinlocation" required>
+                                        <span id="pinlocationMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Latitude/Longitude<span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="LatiLong" name="LatiLong" required>
+                                        <span id="LatiLongMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Contact Number<span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="ContactNumber" name="ContactNumber" required>
+                                        <span id="ContactNumberMsg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Email<span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="Email" name="Email" required>
+                                        <span id="EmailMsg"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Fuel Type<span class="required">*</span> </label>
+                                        <select class="form-control" id="FuelType" name="FuelType" required>
+                                            <option value="" selected disabled>Please select Fuel type</option>
+                                            <option value="92 Ron Octane">92 Ron Octane</option>
+                                            <option value="95 Ron Octane">95 Ron Octane</option>
+                                            <option value="Diesel">Diesel</option>
+                                            <option value="Premium Diesel">Premium Diesel</option>
+                                            <option value="97 Ron Octane">97 Ron Octane</option>
+                                        </select>
+                                        <span id="FuelTypeMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Fuel Quantity<span class="required">*</span> </label>
+                                        <input type="text" class="form-control" id="fuelQuantity" name="fuelQuantity" required>
+                                        <span id="fuelQuantityMsg"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Filling Type<span class="required">*</span> </label>
+                                        <select class="form-control" id="FillingType" name="FillingType" required>
+                                            <option value="" selected disabled>Please select Filling type</option>
+                                            <option value="DG">DG</option>
+                                            <option value="Storage in Condo">Storage in Condo</option>
+                                            <option value="Commercial Store">Commercial Store</option>
+                                        </select>
+                                        <span id="FillingTypeMsg"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label>Region<span class="required">*</span> </label>
+                                        <select class="form-control" id="PermissionRequired" name="PermissionRequired" required>
+                                            <option value="" selected disabled>Please Select</option>
+                                            <option value="Yangon">Yangon</option>
+                                            <option value="Mandalay">Mandalay</option>
+                                            <option value="NayPyiTaw">NayPyiTaw</option>
+                                            <option value="Bago">Bago</option>
+                                            <option value="Ayeyarwady">Ayeyarwady</option>
+                                            <option value="Mon">Mon</option>
+                                            <option value="Sagaing">Sagaing</option>
+                                            <option value="Shan">Shan</option>
+                                            <option value="Chin">Chin</option>
+                                            <option value="Kachin">Kachin</option>
+                                            <option value="Kayin">Kayin</option>
+                                            <option value="Rakhine">Rakhine</option>
+                                            <option value="Taninthayi">Taninthayi</option>
+                                            <option value="Taninthary">Taninthary</option>
+                                        </select>
+                                        <span id="PermissionRequiredMsg"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="submit" class="btn btn-info" value="Submit" id="Order" style="float:right;">
+                                </div>
+                            </div>
+                            <br /><br />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-section-two pb-4">
+            <div class="row">
+                <div class="col-md-4 text-left pt-3">
+                    <div style="padding-right:15px;color:white;margin-top:10px;padding-bottom:5px!important;padding-left:43px!important;">
+                        <img src="website/image/easyfuellogo.png" width="160px">
+                        <br>
+                        <img src="website/image/loc.png" width="15px">
+                        <div style="font-size:0.82rem!important;padding-left:18px; margin-top:-18px;">
+                            Growval Myanmar Limited, <br />
+                            Shwe Moe Kaung condominium,Building B, <br />
+                            14th Ward, Aung Zaya Road,Yankin Township, <br />
+                            Yangon, Myanmar
+                        </div>
+                        <img src="website/image/mail.png" width="15px">
+                        <div style="font-size:13px!important;padding-left:18px; margin-top:-18px;">
+                            sales@growal-mm.com
+                        </div>
+
+
+                        <img src="website/image/telephone.png" width="15px">
+                        <div style="font-size:13px!important;padding-left:18px; margin-top:-18px;">
+                            +95-9797001211, +95-9797001230,<br>+95-9797001488
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 text-left pt-3">
+                    <div class="footer-links">
+                        <h5 class="text-left" style="padding-right:15px;color:white;margin-top:10px;padding-bottom:5px!important;padding-left:43px!important;">
+                            Quick Links
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="footer-names">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="tour.html">Overview</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="mobile-app.html">Mobile App</a>
+                                    </li>
+                                    <li>
+                                        <a href="web-portal.html">Web Portal</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="footer-names">
+                                    <li>
+                                        <a href="terms-condition.html">T&C</a>
+                                    </li>
+                                    <li>
+                                        <a href="privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="return-policy.html">Return Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="register.html">Login/Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 text-left pt-3">
+                    <div class="social-media">
+                        <h5 style="padding-right:30px!important;color:white;margin-top:10px;padding-bottom:5px!important;padding-left:45px">
+                            About Us
+                        </h5>
+                        <p class="text-justify" style="color:white;font-size:0.82rem;padding-left:45px; padding-right:8px;">
+
+                            Easy Fuel is a Growval Myanmar Ltd initiative,
+                            this is on demand mobile fuelling service that delivers
+                            fuel to Vehicles, Generators ,
+                            Construction Equipment etc. It’s Just a Phone call Away.
+                            <br>
+                            <a href="about-us.html" style="color:blue;">more...</a>
+                        </p>
+
+                        <ul class="social-icon">
+                            <li>
+                                <a href="https://www.facebook.com/GrowvalMyanmar/" target="_blank">
+                                    <i class="fa fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/growval-myanmar-ltd-logistics-supply-chain" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="cookie-consent-wrapper d-flex align-content-center justify-content-center">
+        <div class="cookie-consent" style="display: none">
+            FuelEasy uses functionality cookies to provide features in our site. These are necessary for our site to work properly. Cookies can be disabled in your browser settings. Find out more in our <a class="privacy-policy"
+                                                                                                                                                                                                              href="privacy-policy.html" target="_blank">
+                Privacy
+                Policy
+            </a>.
+            <div class="remove-btn">
+                <a href="#">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <img onclick="scrollFunction()" id="ordernow" src="website/image/order_now.png" alt="">
+
+    <img onclick="helpdesk()" id="imghelpdesk" src="website/image/chat.png" alt="">
+
+
+    <div class="chat-popup" id="myForm">
+        <form action="" class="form-container">
+            <h1>Chat</h1>
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div class="ajax-loadding-wrapper d-none">
+    </div>
+
+
+    <script src="website/js/app7b30.js?v=4"></script>
+    <script>
+        var is_close_cookie = localStorage.getItem('is_close_cookie') || false;
+
+        if (!is_close_cookie) {
+            $(".cookie-consent-wrapper .cookie-consent").delay(500).fadeIn();
+        }
+
+        $(".cookie-consent-wrapper .remove-btn a").click(function (e) {
+            // for persistant data
+            localStorage.setItem('is_close_cookie', true);
+            // just for the session
+            sessionStorage.setItem('is_close_cookie', true);
+
+            $(".cookie-consent-wrapper .cookie-consent").fadeOut();
+            return false;
+        });</script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.faq_question').click(function () {
+
+                if ($(this).parent().is('.open')) {
+                    $(this).closest('.faq').find('.faq_answer_container').animate({ 'height': '0' }, 500);
+                    $(this).closest('.faq').removeClass('open');
+
+                } else {
+                    var newHeight = $(this).closest('.faq').find('.faq_answer').height() + 'px';
+                    $(this).closest('.faq').find('.faq_answer_container').animate({ 'height': newHeight }, 500);
+                    $(this).closest('.faq').addClass('open');
+                }
+
+            });
+
+        });
+
+        //Get the button
+        var Order = document.getElementById("ordernow");
+        var mybutton = document.getElementById("imghelpdesk");
+
+
+
+
+        //function scrollFunction() {
+        //    window.open("https://digitxt.yellowstone.com.mm/registration.aspx");
+        //}
+
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navmenu");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+        $('#Login').click(function () {
+
+            var emailphone = $('#emailphone').val();
+            var Password = $('#password').val();
+
+            if (emailphone.length == 0) {
+                $('#emailphonemsg').text('Please enter email or phone number');
+                $('#emailphonemsg').css('color', 'red');
+
+            } else if (Password.length == 0) {
+                $('#passwordmsg').text('Please enter the password');
+                $('#passwordmsg').css('color', 'red');
+            }
+        });
+
+
+        $("[id*=Order]").click(function () {
+            var Name = $.trim($("[id*=Name]").val());
+            var CompanyName = $.trim($("[id*=CompanyName]").val());
+            var pinlocation = $.trim($("[id*=pinlocation]").val());
+            var LatiLong = $.trim($("[id*=LatiLong]").val());
+            var FuelType = $.trim($("[id*=FuelType]").val());
+            var fuelQuantity = $.trim($("[id*=fuelQuantity]").val());
+            var FillingType = $.trim($("[id*=FillingType]").val());
+            var ContactNumber = $.trim($("[id*=ContactNumber]").val());
+            var Email = $.trim($("[id*=Email]").val());
+            var PermissionRequired = $.trim($("[id*=PermissionRequired]").val());
+
+            if (CompanyName.length == 0) {
+                $('#CompanyNameMsg').text('This field is required');
+                $('#CompanyNameMsg').css('color', 'red');
+            }
+            else if (Name.length == 0) {
+                $('#NameMsg').text('This field is required');
+                $('#NameMsg').css('color', 'red');
+            }
+            else if (pinlocation.length == 0) {
+                $('#pinlocationMsg').text('This field is required');
+                $('#pinlocationMsg').css('color', 'red');
+            } else if (LatiLong.length == 0) {
+                $('#LatiLongMsg').text('This field is required');
+                $('#LatiLongMsg').css('color', 'red');
+            } else if (FuelType.length == 0) {
+                $('#FuelTypeMsg').text('This field is required');
+                $('#FuelTypeMsg').css('color', 'red');
+            } else if (fuelQuantity.length == 0) {
+                $('#fuelQuantityMsg').text('This field is required');
+                $('#fuelQuantityMsg').css('color', 'red');
+            } else if (FillingType.length == 0) {
+                $('#FillingTypeMsg').text('This field is required');
+                $('#FillingTypeMsg').css('color', 'red');
+            } else if (Email.length == 0) {
+                $('#EmailMsg').text('This field is required');
+                $('#EmailMsg').css('color', 'red');
+            } else if (ContactNumber.length == 0) {
+                $('#ContactNumberMsg').text('This field is required');
+                $('#ContactNumberMsg').css('color', 'red');
+
+            } else if (PermissionRequired.length == 0) {
+                $('#PermissionRequiredMsg').text('This field is required');
+                $('#PermissionRequiredMsg').css('color', 'red');
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    //url: "ChatWS.asmx/InsertInquiry",
+                    url: "/Services/ChatWS.asmx/InsertOrder",
+                    data: { CompanyName: CompanyName, pinlocation: pinlocation, LatiLong: LatiLong, FuelType: FuelType, fuelQuantity: fuelQuantity, FillingType: FillingType, ContactNumber: ContactNumber, PermissionRequired: PermissionRequired, Name: Name, Email: Email },
+                    success: function (r) {
+                        $('#SuccessMsg').text('Thanks for Ordering, our fuel delivery team will contact you soon..');
+                        $('#SuccessMsg').css('background-color', '#903d8e');
+                        $('#SuccessMsg').css('color', 'white');
+                        $('#SuccessMsg').css('padding', '10px');
+                        //alert(r.d);
+                    },
+                    error: function (r) {
+
+                        alert(r.responseText);
+                    },
+                    failure: function (r) {
+
+                        alert(r.responseText);
+                    }
+                });
+                return false;
+            }
+        });
+
+        $('#CompanyName').keyup(function () {
+            $('#CompanyNameMsg').text('');
+        });
+        $('#Name').keyup(function () {
+            $('#NameMsg').text('');
+        });
+        $('#pinlocation').keyup(function () {
+            $('#pinlocationMsg').text('');
+        });
+        $('#LatiLong').keyup(function () {
+            $('#LatiLongMsg').text('');
+        });
+        $('#FuelType').change(function () {
+            $('#FuelTypeMsg').text('');
+        });
+        $('#fuelQuantity').keyup(function () {
+            $('#fuelQuantityMsg').text('');
+        });
+        $('#FillingType').change(function () {
+            $('#FillingTypeMsg').text('');
+        });
+        $('#ContactNumber').keyup(function () {
+            $('#ContactNumberMsg').text('');
+        });
+        $('#Email').keyup(function () {
+            $('#EmailMsg').text('');
+        });
+        $('#PermissionRequired').change(function () {
+            $('#PermissionRequiredMsg').text('');
+        });
+    </script>
+
+</body>
+</html>
