@@ -1,0 +1,14 @@
+BODY {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: white; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-REPEAT: repeat-x; FONT-FAMILY: Tahoma, Arial, Verdana, Helvetica; HEIGHT: 100%; COLOR: #000; FONT-SIZE: 11px; PADDING-TOP: 0px
+}
+#header {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #000000; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 90px; PADDING-TOP: 5px
+}
+#container
+{
+   width:1090px; 
+   background-color:#D7F4FF; 
+   border:solid 0px #015cb1;
+   margin-top:0px;
+   min-height :600px;
+}

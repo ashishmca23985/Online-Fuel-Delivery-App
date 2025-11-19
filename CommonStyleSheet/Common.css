@@ -1,0 +1,119 @@
+﻿html,body
+{
+	/*background-color:Black;*/
+	height:100%;
+	
+}
+
+.LoginBackground
+{
+    /*background: url(../CommonImages/Galaxy0 - Website - Copy.jpg);*/
+    background-position:center;
+    background-repeat:no-repeat;         
+}   
+.LoginTextBackground
+{
+    /*background: url(../CommonImages/round.jpg); 
+    background-repeat: no-repeat;*/
+    color:Gray;
+} 
+/*  Login Css */
+
+.tdLoginHeader
+{
+	text-align: left;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Tahoma;
+	color: #C0C0C0;
+}
+.tdLogin
+{ 
+	text-align:right;
+	font-size: 11px;
+	font-weight: normal;
+	font-family:Tahoma;
+	color:Navy;	
+	font-weight:bold;
+}
+.tdLoginLabel
+{ 
+	text-align:right;
+	font-size: 11px;
+	font-weight: normal;
+	font-family:Tahoma;
+	/*color:#254117;*/	
+	color:Red;
+	font-weight:bold;
+}
+.tdBottom
+{
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Tahoma;
+	color: #C0C0C0;
+}
+.popupTable1
+{
+	border: 1px solid #C0C0C0;
+	background-color: #F0F5FF;
+}
+.popupTable2
+{
+	border: 1px solid #C0C0C0;
+	background-color: #FFFFD9;
+}
+.popupSub
+{
+	font-weight: normal;
+	color: #B90000;
+}
+.tdValue
+{
+	color: #1F1F1F;
+}
+.modalBackground { 
+    background-color:#cccccc; 
+    filter:alpha(opacity=70); 
+    opacity:0.7px; 
+} 
+.tdHeader
+{
+ width: 18%;  
+}
+.tdHeader span
+{
+    font-size:12px; 
+    font-weight:bold; 
+    color:Black;      
+}
+
+.chatnamesource
+{
+float:left; color:Red; font-family:Verdana; font-weight:bold;  clear:both;  
+}
+.chatnamedest
+{
+float:left; color:Green; font-family:Verdana; font-weight:bold; clear:both;     
+}
+.chatdate
+{
+    display:block;font-size:8px; color:Silver; font-family:Verdana;font-weight:bold;line-height:13px;
+}
+
+.tdheader
+{
+background-color:Silver;
+height:20px;
+width:100%
+
+}
+
+.Heading
+{	
+	font-size: 25px;
+	font-weight: bold;	
+}
+
+

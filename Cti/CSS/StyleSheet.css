@@ -1,0 +1,193 @@
+﻿.maindiv
+{
+	margin-top:75px;
+	position:relative ;  
+	margin-left:50px;  
+}
+.box1
+{	
+	background-image:url("images/box1.gif");
+	
+}
+.box2
+{	
+	background-image:url("images/box2.gif");
+}
+.box3
+{
+	background-image:url("images/box3.gif");
+}
+.box4
+{
+	background-image:url("images/box4.gif");
+}
+.box5
+{
+	background-image:url("images/box5.gif");
+}
+.box6
+{
+	background-image:url("images/box6.gif");
+}
+.box7
+{
+	background-image:url("images/box7.gif");
+}
+.box8
+{
+	background-image:url("images/box8.gif");
+}
+.blue
+{
+}
+.textarea
+{
+	
+}
+.clear
+{
+}
+.background
+{
+	background-image:url("images/content-bg.gif");
+}
+ .table
+ {
+            border:transparent;
+            background-color:#D7F4FF;
+           
+ }
+		 .Label
+         {
+			font-weight: normal;
+			color: #333333;
+			text-align:left ;
+         }
+        .header
+        {
+        	background-color: #0194E1;
+            font: normal 20px "arial";
+            font: bold;
+            border :1px yellow;
+            font-size: large;
+            color:white;
+        }
+        .textbox
+        {
+        	margin:1px 5px 1px 5px;
+        }
+        .bodybackground
+		{
+			background-image:url("images/tata-sky-background.jpg");
+		}
+		.logo
+		{
+			background-image:url("images/tata-sky-logo.gif");
+		}
+		.headerbackground
+		{
+			background-image:url("images/header-background.jpg");
+		}
+		.tdLabel
+		{
+			text-align:right;
+			margin-right:15px;
+			
+		}
+		.tdHeader
+		{
+			font-weight:bold ;
+			text-align: right;
+			background-color: #E5F7F9;
+		}
+		.Button
+		{
+			cursor: hand;
+			color: #ffffff;
+			font-weight: bold;
+			background-color: #3F90DC;
+			background-image: url(../images/login.gif);
+			background-repeat: repeat-x;
+			background-repeat:no-repeat ;
+			height: 20px;
+			font-size: 8pt;
+		}
+		.thMainHeader
+		{
+			font-weight: bold;
+			font-size: 10px;
+			text-align: left;
+			background-image: url(../Images/hd.bmp);
+			background-repeat: repeat-x;
+			height: 15px;
+			cursor: hand;
+		}
+		.textbox
+		{
+			height: 14px;
+			font-size: 11px;
+			color: Black;
+			background-color: #E6E6E6;
+			border-right: #6699cc 1px solid;
+			border-top: #6699cc 1px solid;
+			border-left: #6699cc 1px solid;
+			border-bottom: #6699cc 1px solid;
+			border-color: #7F9DB9;
+		}
+		.thMainHeaderprofile
+		{
+			font-weight: bold;
+			font-size: 10px;
+			text-align: left;
+			background-image: url(../Images/myprofile.bmp);
+			background-repeat: repeat-x;
+			height: 15px;
+			cursor: hand;
+		}
+		.tdHeader1
+		{
+			font-weight: normal;
+			color: #333333;
+			text-align: right;
+			/*background-color: #FFF3E1;*/
+		}
+		.headermyprofile
+		{
+			font-weight: bold;
+			font-size: 10px;
+			text-align: left;
+			background-image:url("../images/myproheader.bmp");
+			background-repeat: repeat-x;
+			height: 18px;
+			cursor: hand;
+		}
+		.dropdown
+		{
+			border: 1px solid #7F9DB9;
+			font-size: 11px;
+			color: Black;
+			background-color: #E6E6E6;
+			height: 14px;
+			
+		}
+		.Button
+		{
+			font-weight: bold;
+			background-image:url("../images/btnimage.bmp");
+			background-repeat: repeat-x;
+			height: 22px;
+			cursor: hand;
+		}
+		
+		.error
+		{
+			font-weight: normal;
+			text-align:center;
+			color: red;
+		}
+		.success
+		{
+			font-weight: normal;
+			text-align:center;
+			color:Green ;
+		}
